@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration status="info" strict="true">
+    <properties>
+        <property name="filename">logs/log.txt</property>
+        <property name="pattern">[%-5p] %d{yyyy-MM-dd HH:mm:ss} (%c:%M():%L) - %m%n</property>
+    </properties>
+    <appenders>
+        <appender type="Console" name="Console">
+            <layout type="PatternLayout" pattern="${pattern}"></layout>
+        </appender>
+        <appender type="Console" name="FLOW">
+            <layout type="PatternLayout" pattern="${pattern}"></layout>
+        </appender>
+        <appender type="File" name="File" fileName="${filename}">
+            <layout type="PatternLayout" pattern="${pattern}"></layout>
+        </appender>
+    </appenders>
+    <loggers>
+        <root level="ALL">
+            <appenderRef ref="File"/>
+            <appenderRef ref="Console"/>
+            <appenderRef ref="FLOW"/>
+        </root>
+    </loggers>
+</configuration>

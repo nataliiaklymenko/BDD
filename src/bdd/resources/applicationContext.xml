@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context">
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath:config.properties"/>
+    <context:component-scan base-package="bdd.config"/>
+    <context:component-scan base-package="bdd.pages"/>
+
+
+</beans>
